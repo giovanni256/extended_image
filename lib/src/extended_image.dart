@@ -35,7 +35,7 @@ class ExtendedImage extends StatefulWidget {
     this.loadStateChanged,
     this.border,
     this.shape,
-    required this.borderRadius,
+    this.borderRadius,
     this.clipBehavior = Clip.antiAlias,
     this.enableLoadState = false,
     this.beforePaintImage,
@@ -210,7 +210,7 @@ class ExtendedImage extends StatefulWidget {
     this.loadStateChanged,
     this.shape,
     this.border,
-    required this.borderRadius,
+    this.borderRadius,
     this.clipBehavior = Clip.antiAlias,
     this.enableLoadState = false,
     this.beforePaintImage,
@@ -307,7 +307,7 @@ class ExtendedImage extends StatefulWidget {
     this.loadStateChanged,
     this.shape,
     this.border,
-    required this.borderRadius,
+    this.borderRadius,
     this.clipBehavior = Clip.antiAlias,
     this.enableLoadState = false,
     this.beforePaintImage,
@@ -398,7 +398,7 @@ class ExtendedImage extends StatefulWidget {
     this.loadStateChanged,
     this.shape,
     this.border,
-    required this.borderRadius,
+    this.borderRadius,
     this.clipBehavior = Clip.antiAlias,
     this.enableLoadState = false,
     this.beforePaintImage,
@@ -466,7 +466,7 @@ class ExtendedImage extends StatefulWidget {
     this.loadStateChanged,
     this.shape,
     this.border,
-    required this.borderRadius,
+    this.borderRadius,
     this.clipBehavior = Clip.antiAlias,
     this.enableLoadState = true,
     this.beforePaintImage,
@@ -622,7 +622,8 @@ class ExtendedImage extends StatefulWidget {
   ///
   /// Applies only to boxes with rectangular shapes; ignored if [shape] is not
   /// [BoxShape.rectangle].
-  required final BorderRadius borderRadius;
+  //final BorderRadius borderRadius;
+  final BorderRadius? borderRadius;
 
   /// custom load state widget if you want
   final LoadStateChanged? loadStateChanged;
@@ -972,7 +973,7 @@ class _ExtendedImageState extends State<ExtendedImage>
           if (widget.borderRadius != null) {
             current = ClipRRect(
               child: current,
-              borderRadius: widget.borderRadius,
+              borderRadius: widget.borderRadius!,
               clipBehavior: widget.clipBehavior,
             );
           }
