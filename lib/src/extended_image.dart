@@ -622,7 +622,7 @@ class ExtendedImage extends StatefulWidget {
   ///
   /// Applies only to boxes with rectangular shapes; ignored if [shape] is not
   /// [BoxShape.rectangle].
-  final BorderRadius? borderRadius;
+  final BorderRadius borderRadius;
 
   /// custom load state widget if you want
   final LoadStateChanged? loadStateChanged;
